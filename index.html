@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EO Syariah - Event Organizer Islami Digital</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-moon"></i>
+                    EO Syariah
+                </div>
+                <!-- Tambahkan burger menu icon ini -->
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showSection('home')">Beranda</a></li>
+                    <li><a href="#" onclick="showSection('services')">Layanan</a></li>
+                    <li><a href="#" onclick="showSection('about')">Tentang</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Kontak</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline" onclick="showModal('loginModal')">Masuk</a>
+                    <a href="#" class="btn btn-primary" onclick="showModal('registerModal')">Daftar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="container">
+                    <h1>Event Organizer Syariah Digital</h1>
+                    <p>Penyelenggara acara Islami terpercaya dengan layanan digital modern yang sesuai prinsip syariah.
+                        Dari pernikahan hingga seminar, kami hadir untuk mewujudkan acara impian Anda.</p>
+                    <a href="#" class="btn btn-primary" onclick="showSection('services')">Jelajahi Layanan</a>
+                </div>
+            </div>
+
+            <div class="services">
+                <div class="container">
+                    <h2>Layanan Unggulan Kami</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <i class="fas fa-heart"></i>
+                            <h3>Wedding Organizer Syariah</h3>
+                            <p>Pernikahan impian yang sesuai dengan ajaran Islam, lengkap dengan tradisi yang sakral dan
+                                penuh berkah.</p>
+                            <div class="price">Mulai dari Rp 15.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('wedding')">Pesan Sekarang</button>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Seminar & Workshop Islami</h3>
+                            <p>Penyelenggaraan seminar, workshop, dan kajian Islam dengan pembicara berkualitas dan
+                                fasilitas lengkap.</p>
+                            <div class="price">Mulai dari Rp 5.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('seminar')">Pesan Sekarang</button>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-baby"></i>
+                            <h3>Aqiqah & Syukuran</h3>
+                            <p>Perayaan aqiqah dan syukuran yang meriah dengan konsep Islami dan makanan halal thayyib.
+                            </p>
+                            <div class="price">Mulai dari Rp 3.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('aqiqah')">Pesan Sekarang</button>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-building"></i>
+                            <h3>Corporate Event Syariah</h3>
+                            <p>Event perusahaan dengan konsep syariah untuk gathering, launching, dan acara korporasi
+                                lainnya.</p>
+                            <div class="price">Mulai dari Rp 10.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('corporate')">Pesan Sekarang</button>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>Event Ramadan & Hari Besar Islam</h3>
+                            <p>Perayaan hari-hari besar Islam seperti Maulid, Isra Mi'raj, dan acara Ramadan yang
+                                berkesan.</p>
+                            <div class="price">Mulai dari Rp 4.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('islamic-holiday')">Pesan
+                                Sekarang</button>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-video"></i>
+                            <h3>Live Streaming Islami</h3>
+                            <p>Layanan live streaming untuk kajian, ceramah, dan acara Islam dengan kualitas HD.</p>
+                            <div class="price">Mulai dari Rp 2.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('streaming')">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="services">
+                <div class="container">
+                    <h2>Semua Layanan Kami</h2>
+                    <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: #666;">
+                        Kami menyediakan berbagai layanan event organizer yang sesuai dengan prinsip syariah
+                    </p>
+                    <div class="services-grid">
+                        <!-- Repeat service cards here -->
+                        <div class="service-card">
+                            <i class="fas fa-heart"></i>
+                            <h3>Wedding Organizer Syariah</h3>
+                            <p>Pernikahan impian yang sesuai dengan ajaran Islam, lengkap dengan tradisi yang sakral dan
+                                penuh berkah.</p>
+                            <div class="price">Mulai dari Rp 15.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('wedding')">Pesan Sekarang</button>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Seminar & Workshop Islami</h3>
+                            <p>Penyelenggaraan seminar, workshop, dan kajian Islam dengan pembicara berkualitas dan
+                                fasilitas lengkap.</p>
+                            <div class="price">Mulai dari Rp 5.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('seminar')">Pesan Sekarang</button>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-baby"></i>
+                            <h3>Aqiqah & Syukuran</h3>
+                            <p>Perayaan aqiqah dan syukuran yang meriah dengan konsep Islami dan makanan halal thayyib.
+                            </p>
+                            <div class="price">Mulai dari Rp 3.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('aqiqah')">Pesan Sekarang</button>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-building"></i>
+                            <h3>Corporate Event Syariah</h3>
+                            <p>Event perusahaan dengan konsep syariah untuk gathering, launching, dan acara korporasi
+                                lainnya.</p>
+                            <div class="price">Mulai dari Rp 10.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('corporate')">Pesan Sekarang</button>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>Event Ramadan & Hari Besar Islam</h3>
+                            <p>Perayaan hari-hari besar Islam seperti Maulid, Isra Mi'raj, dan acara Ramadan yang
+                                berkesan.</p>
+                            <div class="price">Mulai dari Rp 4.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('islamic-holiday')">Pesan
+                                Sekarang</button>
+                        </div>
+
+                        <div class="service-card">
+                            <i class="fas fa-video"></i>
+                            <h3>Live Streaming Islami</h3>
+                            <p>Layanan live streaming untuk kajian, ceramah, dan acara Islam dengan kualitas HD.</p>
+                            <div class="price">Mulai dari Rp 2.000.000</div>
+                            <button class="btn btn-primary" onclick="orderService('streaming')">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="about">
+                <div class="container">
+                    <!-- Hero About -->
+                    <div class="about-hero">
+                        <h2>Tentang EO Syariah</h2>
+                        <p class="about-subtitle">Mewujudkan Acara Berkah dengan Sentuhan Digital Modern</p>
+                    </div>
+
+                    <!-- Main About Content -->
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3>Visi & Misi Kami</h3>
+                            <div class="vision-mission">
+                                <div class="vision">
+                                    <h4><i class="fas fa-eye"></i> Visi</h4>
+                                    <p>Menjadi Event Organizer Syariah terdepan di Indonesia yang menggabungkan
+                                        teknologi digital dengan nilai-nilai Islam untuk menciptakan acara yang penuh
+                                        berkah dan berkesan.</p>
+                                </div>
+                                <div class="mission">
+                                    <h4><i class="fas fa-bullseye"></i> Misi</h4>
+                                    <ul>
+                                        <li>Menyediakan layanan event organizer yang 100% halal dan sesuai syariah</li>
+                                        <li>Menggunakan teknologi digital untuk kemudahan dan efisiensi pelayanan</li>
+                                        <li>Menciptakan acara yang sarat makna spiritual dan nilai-nilai Islam</li>
+                                        <li>Memberikan pengalaman terbaik dengan harga yang amanah</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Section -->
+                        <div class="about-video">
+                            <h3>Profil Perusahaan</h3>
+                            <div class="video-container">
+                                <video autoplay muted loop playsinline width="100%" poster="thumbnail.jpg">
+                                    <source
+                                        src="https://cdn.discordapp.com/attachments/945456645255880754/1381803571699388496/EO_Syariah_Video_Request_Fulfilled.mp4?ex=6848d85c&is=684786dc&hm=b0b17db916473fc7a4139cbbec650c6a6861fcecbe5c64ff13e8c7b8910322a9&"
+                                        type="video/mp4">
+                                    Browser Anda tidak mendukung pemutaran video.
+                                </video>
+                            </div>
+                            <p class="video-caption">Lihat bagaimana kami mengorganisir acara-acara Islami yang penuh
+                                berkah</p>
+                        </div>
+                    </div>
+
+                    <!-- Why Choose Us -->
+                    <div class="why-choose-us">
+                        <h3>Mengapa Memilih EO Syariah?</h3>
+                        <div class="about-features">
+                            <div class="feature">
+                                <i class="fas fa-mosque"></i>
+                                <div>
+                                    <h4>100% Halal & Syariah</h4>
+                                    <p>Semua layanan bebas dari riba, gharar, dan maysir. Konsep acara sesuai dengan
+                                        ajaran Islam.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Berpengalaman & Terpercaya</h4>
+                                    <p>Lebih dari 500+ acara sukses dengan testimoni positif dari berbagai kalangan.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <h4>Platform Digital Modern</h4>
+                                    <p>Sistem booking online, konsultasi virtual, dan monitoring acara secara real-time.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="feature">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <h4>Penuh Berkah & Makna</h4>
+                                    <p>Setiap acara dirancang untuk memberikan nilai spiritual dan keberkahan bagi
+                                        semua.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4>Tim Profesional</h4>
+                                    <p>Tim yang berpengalaman dan memahami nilai-nilai Islam dalam setiap aspek
+                                        pelayanan.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <div>
+                                    <h4>Harga Amanah</h4>
+                                    <p>Transparansi harga tanpa biaya tersembunyi, sistem pembayaran yang fleksibel.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="statistics">
+                        <h3>Pencapaian Kami</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Acara Sukses</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1000+</div>
+                                <div class="stat-label">Klien Puas</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">Tahun Pengalaman</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">Tingkat Kepuasan</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Testimonials -->
+                    <div class="testimonials-video">
+                        <h3>Testimoni Klien</h3>
+                        <div class="testimonial-videos">
+                            <div class="testimonial-item">
+                                <div class="video-container small">
+                                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                        title="Testimoni Wedding Syariah" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <h4>Wedding Syariah - Ustadz Ahmad & Ustadzah Fatimah</h4>
+                                <p>"Alhamdulillah, acara pernikahan kami berjalan sangat lancar dan penuh berkah."</p>
+                            </div>
+
+                            <div class="testimonial-item">
+                                <div class="video-container small">
+                                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                        title="Testimoni Seminar Islami" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <h4>Seminar Parenting Islami - Yayasan Al-Hikmah</h4>
+                                <p>"Tim yang sangat profesional dan memahami kebutuhan acara Islami."</p>
+                            </div>
+
+                            <div class="testimonial-item">
+                                <div class="video-container small">
+                                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Testimoni Aqiqah"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <h4>Aqiqah & Syukuran - Keluarga Bapak Hasan</h4>
+                                <p>"Acara aqiqah yang sangat berkesan dan sesuai dengan sunnah Rasulullah."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Our Values -->
+                    <div class="our-values">
+                        <h3>Nilai-Nilai Kami</h3>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <i class="fas fa-book-quran"></i>
+                                <h4>Al-Quran & Sunnah</h4>
+                                <p>Segala aktivitas berdasarkan pada Al-Quran dan Sunnah Rasulullah SAW</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-handshake"></i>
+                                <h4>Amanah</h4>
+                                <p>Menjalankan tanggung jawab dengan penuh kepercayaan dan integritas</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-star-and-crescent"></i>
+                                <h4>Barakah</h4>
+                                <p>Menghadirkan keberkahan dalam setiap acara yang kami selenggarakan</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-hands-helping"></i>
+                                <h4>Fastabiqul Khairat</h4>
+                                <p>Berlomba dalam kebaikan dan memberikan pelayanan terbaik</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="services">
+                <div class="container">
+                    <h2>Hubungi Kami</h2>
+                    <div style="max-width: 600px; margin: 0 auto;">
+                        <div class="service-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Kontak Langsung</h3>
+                            <p><strong>Telepon:</strong> +62 812-3456-7890</p>
+                            <p><strong>Email:</strong> info@eosyariah.com</p>
+                            <p><strong>WhatsApp:</strong> +62 812-3456-7890</p>
+                            <p><strong>Alamat:</strong> Jl. Syariah No. 123, Jakarta</p>
+                            <button class="btn btn-primary"
+                                onclick="window.open('https://wa.me/6281234567890', '_blank')">
+                                <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2 style="margin-bottom: 2rem; text-align: center; color: #4a5568;">Masuk ke Akun Anda</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email atau No. Telepon</label>
+                    <input type="text" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Kata Sandi</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Masuk</button>
+                <p style="text-align: center;">
+                    Belum punya akun? <a href="#" onclick="closeModal('loginModal'); showModal('registerModal')"
+                        style="color: #667eea;">Daftar di sini</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2 style="margin-bottom: 2rem; text-align: center; color: #4a5568;">Daftarkan Akun Baru</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Nama Lengkap</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPhone">No. Telepon</label>
+                    <input type="tel" id="registerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Kata Sandi</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Konfirmasi Kata Sandi</label>
+                    <input type="password" id="registerConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Daftar</button>
+                <p style="text-align: center;">
+                    Sudah punya akun? <a href="#" onclick="closeModal('registerModal'); showModal('loginModal')"
+                        style="color: #667eea;">Masuk di sini</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('orderModal')">&times;</span>
+            <h2 style="margin-bottom: 2rem; text-align: center; color: #4a5568;">Pesan Layanan</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="orderService">Jenis Layanan</label>
+                    <select id="orderService" required>
+                        <option value="">Pilih Layanan</option>
+                        <option value="wedding">Wedding Organizer Syariah</option>
+                        <option value="seminar">Seminar & Workshop Islami</option>
+                        <option value="aqiqah">Aqiqah & Syukuran</option>
+                        <option value="corporate">Corporate Event Syariah</option>
+                        <option value="islamic-holiday">Event Ramadan & Hari Besar Islam</option>
+                        <option value="streaming">Live Streaming Islami</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="orderName">Nama Lengkap</label>
+                    <input type="text" id="orderName" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderPhone">No. Telepon</label>
+                    <input type="tel" id="orderPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderDate">Tanggal Acara</label>
+                    <input type="date" id="orderDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderGuests">Perkiraan Jumlah Tamu</label>
+                    <input type="number" id="orderGuests" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderBudget">Budget (Rp)</label>
+                    <select id="orderBudget" required>
+                        <option value="">Pilih Range Budget</option>
+                        <option value="2-5">2 - 5 Juta</option>
+                        <option value="5-10">5 - 10 Juta</option>
+                        <option value="10-20">10 - 20 Juta</option>
+                        <option value="20-50">20 - 50 Juta</option>
+                        <option value="50+">50 Juta+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="orderNotes">Catatan Tambahan</label>
+                    <textarea id="orderNotes" rows="3"
+                        placeholder="Ceritakan detail acara yang Anda inginkan..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Permintaan</button>
+            </form>
+            <div id="orderLoading" class="loading">
+                <div class="spinner"></div>
+                <p>Mengirim permintaan Anda...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EO Syariah</h3>
+                    <p>Event Organizer Islami terpercaya dengan layanan digital modern yang sesuai prinsip syariah.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Layanan</h3>
+                    <a href="#">Wedding Organizer</a>
+                    <a href="#">Seminar Islami</a>
+                    <a href="#">Aqiqah & Syukuran</a>
+                    <a href="#">Corporate Event</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <a href="tel:+6281234567890">+62 812-3456-7890</a>
+                    <a href="mailto:info@eosyariah.com">info@eosyariah.com</a>
+                    <a href="#">Jl. Syariah No. 123, Jakarta</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Ikuti Kami</h3>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #4a5568; padding-top: 2rem; margin-top: 2rem;">
+                <p>&copy; 2025 EO Syariah. Semua hak dilindungi. Barakallahu fiikum.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation and Modal Functions
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Order Service Function
+        function orderService(serviceType) {
+            const serviceSelect = document.getElementById('orderService');
+            serviceSelect.value = serviceType;
+            showModal('orderModal');
+        }
+
+        // Form Submissions
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Simulate login process
+            if (email && password) {
+                alert('Selamat datang! Login berhasil.');
+                closeModal('loginModal');
+            } else {
+                alert('Mohon lengkapi semua field.');
+            }
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('registerName').value;
+            const email = document.getElementById('registerEmail').value;
+            const phone = document.getElementById('registerPhone').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('registerConfirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('Konfirmasi password tidak sesuai.');
+                return;
+            }
+
+            if (name && email && phone && password) {
+                alert('Alhamdulillah! Pendaftaran berhasil. Silakan login.');
+                closeModal('registerModal');
+                showModal('loginModal');
+            } else {
+                alert('Mohon lengkapi semua field.');
+            }
+        });
+
+        document.getElementById('orderForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const orderData = {
+                service: document.getElementById('orderService').value,
+                name: document.getElementById('orderName').value,
+                phone: document.getElementById('orderPhone').value,
+                date: document.getElementById('orderDate').value,
+                guests: document.getElementById('orderGuests').value,
+                budget: document.getElementById('orderBudget').value,
+                notes: document.getElementById('orderNotes').value
+            };
+
+            // Show loading
+            document.getElementById('orderLoading').style.display = 'block';
+            this.style.display = 'none';
+
+            // Simulate order processing
+            setTimeout(() => {
+                alert('Barakallahu fiikum! Permintaan Anda telah diterima. Tim kami akan menghubungi Anda segera.');
+                closeModal('orderModal');
+                document.getElementById('orderLoading').style.display = 'none';
+                this.style.display = 'block';
+                this.reset();
+            }, 2000);
+        });
+
+        // Set minimum date to today for event date
+        document.addEventListener('DOMContentLoaded', function () {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('orderDate').setAttribute('min', today);
+
+            // Add smooth scrolling for better UX
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add some Islamic greetings and notifications
+        function showIslamicGreeting() {
+            const greetings = [
+                'Assalamu\'alaikum wa rahmatullahi wa barakatuh',
+                'Barakallahu fiikum',
+                'Jazakallahu khair',
+                'Fi amanillah'
+            ];
+
+            const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+            return randomGreeting;
+        }
+
+        // Enhanced WhatsApp integration
+        function openWhatsApp(message = '') {
+            const phone = '6288287759708';
+            const defaultMessage = 'Assalamu\'alaikum, saya tertarik dengan layanan EO Syariah. Mohon informasi lebih lanjut.';
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message || defaultMessage)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Add floating WhatsApp button
+        function addFloatingWhatsApp() {
+            const floatingBtn = document.createElement('div');
+            floatingBtn.innerHTML = `
+                <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+                    <button onclick="openWhatsApp()" style="
+                        background: #25D366; 
+                        color: white; 
+                        border: none; 
+                        border-radius: 50%; 
+                        width: 60px; 
+                        height: 60px; 
+                        font-size: 24px; 
+                        cursor: pointer; 
+                        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+                        transition: all 0.3s ease;
+                    " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(floatingBtn);
+        }
+
+        // Initialize floating WhatsApp button
+        document.addEventListener('DOMContentLoaded', function () {
+            addFloatingWhatsApp();
+        });
+
+        // Add Islamic time-based greetings
+        function getIslamicTimeGreeting() {
+            const hour = new Date().getHours();
+
+            if (hour >= 4 && hour < 12) {
+                return 'Shubuh/Pagi yang berkah!';
+            } else if (hour >= 12 && hour < 15) {
+                return 'Dzuhur yang penuh barakah!';
+            } else if (hour >= 15 && hour < 18) {
+                return 'Ashar yang diberkahi!';
+            } else if (hour >= 18 && hour < 20) {
+                return 'Maghrib yang indah!';
+            } else {
+                return 'Isya yang tenang!';
+            }
+        }
+
+        // Add prayer time reminder (optional feature)
+        function addPrayerTimeReminder() {
+            const prayerTimes = {
+                'Shubuh': '05:00',
+                'Dzuhur': '12:00',
+                'Ashar': '15:30',
+                'Maghrib': '18:00',
+                'Isya': '19:30'
+            };
+
+            // This would typically connect to a prayer time API
+            console.log('Prayer times loaded for Islamic-themed website');
+        }
+
+        // Initialize Islamic features
+        document.addEventListener('DOMContentLoaded', function () {
+            addPrayerTimeReminder();
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const authButtons = document.querySelector('.auth-buttons');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+
+            navLinks.classList.toggle('active');
+            authButtons.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        // Event listener untuk burger menu
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            if (menuToggle) {
+                menuToggle.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Close mobile menu when clicking menu items
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                const navbar = document.querySelector('.navbar');
+                const navLinks = document.querySelector('.nav-links');
+
+                if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
